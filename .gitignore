@@ -1,0 +1,13 @@
+# build output
+build/
+.gradle/
+run/
+
+# editors
+.idea/
+*.iml
+.vscode/
+.DS_Store
+
+# logs
+*.log

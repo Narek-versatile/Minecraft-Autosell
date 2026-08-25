@@ -1,0 +1,68 @@
+# What autosell-debug.log looks like, and how to read it
+#
+# The single most useful artifact for remote debugging. Ask the user for it
+# before theorising about any reported symptom - it resolved several bugs on
+# first read where description alone had gone in circles.
+#
+# Every phase change logs a one-line state dump:
+#   cycle       fuel cycle index
+#   step        index into the recorded shop path
+#   target      stacks the run intends to buy
+#   qtySlot     slot holding the amount counter
+#   awaiting    counter value being waited for (-1 = not waiting)
+#   resume      resume crafting after the current drop
+#   resultWait  ticks spent waiting for the server's crafting result
+#   fails       consecutive craft failures
+#   bones/meal  live inventory counts
+#   carried     what is on the cursor ("-" = empty)
+#   screen      open screen title ("-" = none)
+#   walker      baritone | builtin | align | off
+#
+# ================================================================
+# HEALTHY CRAFT LOOP  (captured 2026-08-25, cycle 21)
+#
+# Read it: one click per state, and `carried=Bone` appears for exactly
+# one transition - the stack is picked up in CRAFT_PICKUP and put down in
+# CRAFT_INSERT, never both in the same tick. bones falls 256 -> 192 as a
+# stack is consumed, and meal climbs steadily. That is correct behaviour.
+# ================================================================
+
+[08:30:28.307] fuel: CRAFT_INSERT -> CRAFT_TAKE  cycle=21 step=3 target=30 qtySlot=22 awaiting=-1 resume=false resultWait=0 fails=0 delay=0 bones=192 meal=1728 carried=- screen=Chat screen walker=off
+[08:30:28.448] fuel: CRAFT_TAKE -> CRAFT_PLACE  cycle=21 step=3 target=30 qtySlot=22 awaiting=-1 resume=false resultWait=0 fails=0 delay=1 bones=256 meal=1728 carried=- screen=Chat screen walker=off
+[08:30:28.553] fuel: CRAFT_PLACE -> CRAFT_PICKUP  cycle=21 step=3 target=30 qtySlot=22 awaiting=-1 resume=false resultWait=0 fails=0 delay=0 bones=256 meal=1728 carried=- screen=Chat screen walker=off
+[08:30:28.652] fuel: CRAFT_PICKUP -> CRAFT_INSERT  cycle=21 step=3 target=30 qtySlot=22 awaiting=-1 resume=false resultWait=0 fails=0 delay=0 bones=192 meal=1728 carried=Bone screen=Chat screen walker=off
+[08:30:28.750] fuel: CRAFT_INSERT -> CRAFT_PLACE  cycle=21 step=3 target=30 qtySlot=22 awaiting=-1 resume=false resultWait=0 fails=0 delay=0 bones=256 meal=1728 carried=- screen=Chat screen walker=off
+[08:30:28.793] fuel: CRAFT_PLACE -> CRAFT_PICKUP  cycle=21 step=3 target=30 qtySlot=22 awaiting=-1 resume=false resultWait=0 fails=0 delay=0 bones=256 meal=1728 carried=- screen=Chat screen walker=off
+[08:30:28.898] fuel: CRAFT_PICKUP -> CRAFT_INSERT  cycle=21 step=3 target=30 qtySlot=22 awaiting=-1 resume=false resultWait=0 fails=0 delay=0 bones=192 meal=1728 carried=Bone screen=Chat screen walker=off
+[08:30:28.994] fuel: CRAFT_INSERT -> CRAFT_TAKE  cycle=21 step=3 target=30 qtySlot=22 awaiting=-1 resume=false resultWait=0 fails=0 delay=0 bones=192 meal=1728 carried=- screen=Chat screen walker=off
+
+# ================================================================
+# THE WOBBLE, BEFORE THE FIX  (bug #6, historical)
+#
+# The signature: bones alternates by exactly 64 - one stack leaving the
+# inventory and coming straight back - while meal NEVER changes, and
+# resultWait stays 0 (CRAFT_TAKE saw an empty grid every time). That
+# pattern means server-side rejection, not slow timing, which is what
+# pointed at two clicks sharing one stateId.
+#
+#   CRAFT_PLACE -> CRAFT_TAKE   ... bones=1216 meal=186 resultWait=0
+#   CRAFT_TAKE  -> CRAFT_PLACE  ... bones=1280 meal=186 resultWait=0
+#   CRAFT_PLACE -> CRAFT_TAKE   ... bones=1216 meal=186 resultWait=0
+#   CRAFT_TAKE  -> CRAFT_PLACE  ... bones=1280 meal=186 resultWait=0
+#   (repeats at ~5 Hz, meal pinned forever)
+#
+# Note there is no CRAFT_PICKUP/CRAFT_INSERT in those lines - that split
+# is the fix, so its absence dates the log.
+# ================================================================
+
+# ================================================================
+# PATHING FAILURE  (bug #11, historical)
+# ================================================================
+[08:21:47.308] fuel: AWAIT_GOODS -> WALK_FARM  cycle=16 step=3 target=30 qtySlot=22 awaiting=-1 resume=false resultWait=0 fails=0 delay=2 bones=1920 meal=0 carried=- screen=- walker=baritone
+[08:21:47.437] fuel: WALK_FARM -> ALIGN_FARM  cycle=16 step=3 target=30 qtySlot=22 awaiting=-1 resume=false resultWait=0 fails=0 delay=1 bones=1920 meal=0 carried=- screen=Game Menu walker=off
+[08:23:38.796] fuel: AWAIT_GOODS -> WALK_FARM  cycle=17 step=3 target=30 qtySlot=22 awaiting=-1 resume=false resultWait=0 fails=0 delay=2 bones=1920 meal=0 carried=- screen=- walker=baritone
+
+# The farm spot had been recorded while straddling two blocks, so its
+# blockPosition() was not standable and Baritone correctly reported it
+# unreachable. Fixed by pathing to nearestStandable() and letting the
+# strafe-alignment step cover the exact sub-block placement.

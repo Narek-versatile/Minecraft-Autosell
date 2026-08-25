@@ -1,0 +1,29 @@
+{
+	"schemaVersion": 1,
+	"id": "autosell",
+	"version": "${version}",
+	"name": "AutoSell",
+	"description": "Triple-press a key to loot whitelisted items from a chest, verify the inventory is clean, run /sellall inventory, and log the profit. Client-side only.",
+	"authors": [
+		"NarekTM"
+	],
+	"license": "MIT",
+	"environment": "client",
+	"entrypoints": {
+		"client": [
+			"com.narek.autosell.AutoSellClient"
+		]
+	},
+	"mixins": [
+		{
+			"config": "autosell.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.3",
+		"minecraft": "~26.2",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}

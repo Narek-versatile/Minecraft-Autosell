@@ -1,0 +1,384 @@
+# Real captures of the PlanetPVP shop — the bone purchase path
+#
+# Produced automatically by GuiLogger. This is the ground truth the recorded
+# shop path was built from. Note:
+#   - titles and item names are Unicode SMALL CAPITALS (ᴍᴏʙs, ʙᴏɴᴇ)
+#   - the quantity buttons are literally named "+1" "+16" "+32" "-1" "-16",
+#     which is why they can be auto-discovered instead of recorded
+#   - the counter is the bone stack itself; its count = number of stacks
+#   - the player head slot carries "Balance: $..." in its lore
+#
+# Recorded click path: MOBS(21) -> BONE(3) -> buy stacks(31) -> purchase(13)
+
+=== 05:28:06  TITLE: ᴘʟᴀɴᴇᴛ ꜱʜᴏᴘ  ===
+containerSlots: 54  rows: 6  totalWithPlayer: 90
+slot 0   (r0,c0) x1   minecraft:gray_stained_glass_pane  " "
+slot 1   (r0,c1) x1   minecraft:gray_stained_glass_pane  " "
+slot 2   (r0,c2) x1   minecraft:gray_stained_glass_pane  " "
+slot 3   (r0,c3) x1   minecraft:gray_stained_glass_pane  " "
+slot 4   (r0,c4) x1   minecraft:lectern                  "ᴇssᴇɴᴛɪᴀʟs"
+slot 5   (r0,c5) x1   minecraft:gray_stained_glass_pane  " "
+slot 6   (r0,c6) x1   minecraft:gray_stained_glass_pane  " "
+slot 7   (r0,c7) x1   minecraft:gray_stained_glass_pane  " "
+slot 8   (r0,c8) x1   minecraft:gray_stained_glass_pane  " "
+slot 9   (r1,c0) x1   minecraft:gray_stained_glass_pane  " "
+slot 10  (r1,c1) x1   minecraft:gray_stained_glass_pane  " "
+slot 11  (r1,c2) x1   minecraft:gray_stained_glass_pane  " "
+slot 12  (r1,c3) x1   minecraft:gray_stained_glass_pane  " "
+slot 13  (r1,c4) x1   minecraft:diamond_chestplate       "ɢᴇᴀʀ"
+slot 14  (r1,c5) x1   minecraft:gray_stained_glass_pane  " "
+slot 15  (r1,c6) x1   minecraft:gray_stained_glass_pane  " "
+slot 16  (r1,c7) x1   minecraft:gray_stained_glass_pane  " "
+slot 17  (r1,c8) x1   minecraft:gray_stained_glass_pane  " "
+slot 18  (r2,c0) x1   minecraft:gray_stained_glass_pane  " "
+slot 19  (r2,c1) x1   minecraft:gray_stained_glass_pane  " "
+slot 20  (r2,c2) x1   minecraft:grass_block              "ʙʟᴏᴄᴋs"
+slot 21  (r2,c3) x1   minecraft:gunpowder                "ᴍᴏʙs"
+slot 22  (r2,c4) x1   minecraft:end_crystal              "ᴘᴠᴘ"
+slot 23  (r2,c5) x1   minecraft:redstone                 "ʀᴇᴅsᴛᴏɴᴇ"
+slot 24  (r2,c6) x1   minecraft:wheat                    "ꜰᴀʀᴍɪɴɢ"
+slot 25  (r2,c7) x1   minecraft:gray_stained_glass_pane  " "
+slot 26  (r2,c8) x1   minecraft:gray_stained_glass_pane  " "
+slot 27  (r3,c0) x1   minecraft:gray_stained_glass_pane  " "
+slot 28  (r3,c1) x1   minecraft:gray_stained_glass_pane  " "
+slot 29  (r3,c2) x1   minecraft:gray_stained_glass_pane  " "
+slot 30  (r3,c3) x1   minecraft:gray_stained_glass_pane  " "
+slot 31  (r3,c4) x1   minecraft:spawner                  "ꜱᴘᴀᴡɴᴇʀꜱ"
+slot 32  (r3,c5) x1   minecraft:gray_stained_glass_pane  " "
+slot 33  (r3,c6) x1   minecraft:gray_stained_glass_pane  " "
+slot 34  (r3,c7) x1   minecraft:gray_stained_glass_pane  " "
+slot 35  (r3,c8) x1   minecraft:gray_stained_glass_pane  " "
+slot 36  (r4,c0) x1   minecraft:gray_stained_glass_pane  " "
+slot 37  (r4,c1) x1   minecraft:gray_stained_glass_pane  " "
+slot 38  (r4,c2) x1   minecraft:gray_stained_glass_pane  " "
+slot 39  (r4,c3) x1   minecraft:gray_stained_glass_pane  " "
+slot 40  (r4,c4) x1   minecraft:gray_stained_glass_pane  " "
+slot 41  (r4,c5) x1   minecraft:gray_stained_glass_pane  " "
+slot 42  (r4,c6) x1   minecraft:gray_stained_glass_pane  " "
+slot 43  (r4,c7) x1   minecraft:gray_stained_glass_pane  " "
+slot 44  (r4,c8) x1   minecraft:gray_stained_glass_pane  " "
+slot 45  (r5,c0) x1   minecraft:player_head              "ᴍᴇᴍʙᴇʀ  NarekTM"
+            | Balance: $452,860.80
+slot 53  (r5,c8) x1   minecraft:barrier                  "Cancel"
+=== end ===
+
+=== 05:28:09  TITLE: ᴍᴏʙs ===
+containerSlots: 36  rows: 4  totalWithPlayer: 72
+slot 0   (r0,c0) x1   minecraft:arrow                    "ᴀʀʀᴏᴡ"
+            | 
+            |  Buy Price
+            |  ■ $2.26
+            | 
+            |  Sell Price
+            |  ■ $0.57
+            | 
+            |  Usage:
+            |  ╚» Left click to buy
+            |  ╚» Shift + Right Click to sell all
+            |  ╚» Right click to sell
+            | 
+            | ᴘʀɪᴄᴇ: $2.26
+            | ꜱᴇʟʟ: $0.57
+slot 1   (r0,c1) x1   minecraft:blaze_powder             "ʙʟᴀᴢᴇ ᴘᴏᴡᴅᴇʀ"
+            | 
+            |  Buy Price
+            |  ■ $2.63
+            | 
+            |  Sell Price
+            |  ■ $0.66
+            | 
+            |  Usage:
+            |  ╚» Left click to buy
+            |  ╚» Shift + Right Click to sell all
+            |  ╚» Right click to sell
+            | 
+            | ᴘʀɪᴄᴇ: $2.63
+            | ꜱᴇʟʟ: $0.66
+slot 2   (r0,c2) x1   minecraft:blaze_rod                "ʙʟᴀᴢᴇ ʀᴏᴅ"
+            | 
+            |  Buy Price
+            |  ■ $5.00
+            | 
+            |  Sell Price
+            |  ■ $1.25
+            | 
+            |  Usage:
+            |  ╚» Left click to buy
+            |  ╚» Shift + Right Click to sell all
+            |  ╚» Right click to sell
+            | 
+            | ᴘʀɪᴄᴇ: $5.00
+            | ꜱᴇʟʟ: $1.25
+slot 3   (r0,c3) x1   minecraft:bone                     "ʙᴏɴᴇ"
+            | 
+            |  Buy Price
+            |  ■ $6.00
+            | 
+            |  Sell Price
+            |  ■ $1.50
+            | 
+            |  Usage:
+            |  ╚» Left click to buy
+            |  ╚» Shift + Right Click to sell all
+            |  ╚» Right click to sell
+            | 
+            | ᴘʀɪᴄᴇ: $6.00
+            | ꜱᴇʟʟ: $1.50
+slot 4   (r0,c4) x1   minecraft:breeze_rod               "ʙʀᴇᴇᴢᴇ ʀᴏᴅ"
+            | 
+            |  Buy Price
+            |  ■ Cannot be bought
+            | 
+            |  Sell Price
+            |  ■ $5.00
+            | 
+            |  Usage:
+            |  ╚» Shift + Right Click to sell all
+            |  ╚» Right click to sell
+            | 
+            | ᴘʀɪᴄᴇ: $Cant be bought
+            | ꜱᴇʟʟ: $5.00
+slot 5   (r0,c5) x1   minecraft:ender_pearl              "ᴇɴᴅᴇʀ ᴘᴇᴀʀʟ"
+            | 
+            |  Buy Price
+            |  ■ $85.00
+            | 
+            |  Sell Price
+            |  ■ $7.32
+            | 
+            |  Usage:
+            |  ╚» Left click to buy
+            |  ╚» Shift + Right Click to sell all
+            |  ╚» Right click to sell
+            | 
+            | ᴘʀɪᴄᴇ: $85.00
+            | ꜱᴇʟʟ: $7.32
+slot 6   (r0,c6) x1   minecraft:feather                  "ꜰᴇᴀᴛʜᴇʀ"
+            | 
+            |  Buy Price
+            |  ■ $6.00
+            | 
+            |  Sell Price
+            |  ■ $1.50
+            | 
+            |  Usage:
+            |  ╚» Left click to buy
+            |  ╚» Shift + Right Click to sell all
+            |  ╚» Right click to sell
+            | 
+            | ᴘʀɪᴄᴇ: $6.00
+            | ꜱᴇʟʟ: $1.50
+slot 7   (r0,c7) x1   minecraft:fermented_spider_eye     "ꜰᴇʀᴍᴇɴᴛᴇᴅ ꜱᴘɪᴅᴇʀ ᴇʏᴇ"
+            | 
+            |  Buy Price
+            |  ■ $9.57
+            | 
+            |  Sell Price
+            |  ■ $2.40
+            | 
+            |  Usage:
+            |  ╚» Left click to buy
+            |  ╚» Shift + Right Click to sell all
+            |  ╚» Right click to sell
+            | 
+            | ᴘʀɪᴄᴇ: $9.57
+            | ꜱᴇʟʟ: $2.40
+slot 8   (r0,c8) x1   minecraft:ghast_tear               "ɢʜᴀꜱᴛ ᴛᴇᴀʀ"
+            | 
+            |  Buy Price
+            |  ■ $40.00
+            | 
+            |  Sell Price
+            |  ■ $10.00
+            | 
+            |  Usage:
+            |  ╚» Left click to buy
+            |  ╚» Shift + Right Click to sell all
+            |  ╚» Right click to sell
+            | 
+            | ᴘʀɪᴄᴇ: $40.00
+            | ꜱᴇʟʟ: $10.00
+slot 9   (r1,c0) x1   minecraft:gunpowder                "ɢᴜɴᴘᴏᴡᴅᴇʀ"
+            | 
+            |  Buy Price
+            |  ■ $15.50
+            | 
+            |  Sell Price
+            |  ■ $3.88
+            | 
+            |  Usage:
+            |  ╚» Left click to buy
+            |  ╚» Shift + Right Click to sell all
+            |  ╚» Right click to sell
+            | 
+            | ᴘʀɪᴄᴇ: $15.50
+            | ꜱᴇʟʟ: $3.88
+slot 10  (r1,c1) x1   minecraft:magma_cream              "ᴍᴀɢᴍᴀ ᴄʀᴇᴀᴍ"
+            | 
+            |  Buy Price
+            |  ■ $8.01
+            | 
+            |  Sell Price
+            |  ■ $2.01
+            | 
+            |  Usage:
+            |  ╚» Left click to buy
+            |  ╚» Shift + Right Click to sell all
+            |  ╚» Right click to sell
+            | 
+            | ᴘʀɪᴄᴇ: $8.01
+            | ꜱᴇʟʟ: $2.01
+slot 11  (r1,c2) x1   minecraft:nautilus_shell           "ɴᴀᴜᴛɪʟᴜꜱ ꜱʜᴇʟʟ"
+            | 
+            |  Buy Price
+            |  ■ $180.00
+            | 
+            |  Sell Price
+            |  ■ $45.00
+            | 
+            |  Usage:
+            |  ╚» Left click to buy
+            |  ╚» Shift + Right Click to sell all
+            |  ╚» Right click to sell
+            | 
+            | ᴘʀɪᴄᴇ: $180.00
+            | ꜱᴇʟʟ: $45.00
+slot 12  (r1,c3) x1   minecraft:phantom_membrane         "ᴘʜᴀɴᴛᴏᴍ ᴍᴇᴍʙʀᴀɴᴇ"
+            | 
+            |  Buy Price
+            |  ■ $125.15
+            | 
+            |  Sell Price
+            |  ■ $31.29
+            | 
+            |  Usage:
+            |  ╚» Left click to buy
+            |  ╚» Shift + Right Click to sell all
+            |  ╚» Right click to sell
+            | 
+            | ᴘʀɪᴄᴇ: $125.15
+            | ꜱᴇʟʟ: $31.29
+slot 13  (r1,c4) x1   minecraft:rabbit_foot              "ʀᴀʙʙɪᴛ ꜰᴏᴏᴛ"
+            | 
+            |  Buy Price
+            |  ■ $180.00
+            | 
+            |  Sell Price
+            |  ■ $45.00
+            | 
+            |  Usage:
+            |  ╚» Left click to buy
+            |  ╚» Shift + Right Click to sell all
+            |  ╚» Right click to sell
+            | 
+            | ᴘʀɪᴄᴇ: $180.00
+            | ꜱᴇʟʟ: $45.00
+slot 14  (r1,c5) x1   minecraft:rabbit_hide              "ʀᴀʙʙɪᴛ ʜɪᴅᴇ"
+            | 
+            |  Buy Price
+            |  ■ $8.00
+            | 
+            |  Sell Price
+            |  ■ $2.00
+            | 
+            |  Usage:
+            |  ╚» Left click to buy
+            |  ╚» Shift + Right Click to sell all
+            |  ╚» Right click to sell
+            | 
+            | ᴘʀɪᴄᴇ: $8.00
+            | ꜱᴇʟʟ: $2.00
+slot 15  (r1,c6) x1   minecraft:rotten_flesh             "ʀᴏᴛᴛᴇɴ ꜰʟᴇꜱʜ"
+            | 
+            |  Buy Price
+            |  ■ $5.00
+            | 
+            |  Sell Price
+            |  ■ $1.25
+            | 
+            |  Usage:
+            |  ╚» Left click to buy
+            |  ╚» Shift + Right Click to sell all
+            |  ╚» Right click to sell
+            | 
+            | ᴘʀɪᴄᴇ: $5.00
+            | ꜱᴇʟʟ: $1.25
+slot 16  (r1,c7) x1   minecraft:slime_ball               "ꜱʟɪᴍᴇ ʙᴀʟʟ"
+            | 
+            |  Buy Price
+            |  ■ $5.00
+            | 
+            |  Sell Price
+            |  ■ $1.25
+            | 
+            |  Usage:
+            |  ╚» Left click to buy
+            |  ╚» Shift + Right Click to sell all
+            |  ╚» Right click to sell
+            | 
+            | ᴘʀɪᴄᴇ: $5.00
+            | ꜱᴇʟʟ: $1.25
+slot 17  (r1,c8) x1   minecraft:spider_eye               "ꜱᴘɪᴅᴇʀ ᴇʏᴇ"
+            | 
+            |  Buy Price
+            |  ■ $7.00
+            | 
+            |  Sell Price
+            |  ■ $1.75
+            | 
+            |  Usage:
+            |  ╚» Left click to buy
+            |  ╚» Shift + Right Click to sell all
+            |  ╚» Right click to sell
+            | 
+            | ᴘʀɪᴄᴇ: $7.00
+            | ꜱᴇʟʟ: $1.75
+slot 18  (r2,c0) x1   minecraft:string                   "ꜱᴛʀɪɴɢ"
+            | 
+            |  Buy Price
+            |  ■ $7.00
+            | 
+            |  Sell Price
+            |  ■ $1.75
+            | 
+            |  Usage:
+            |  ╚» Left click to buy
+            |  ╚» Shift + Right Click to sell all
+            |  ╚» Right click to sell
+            | 
+            | ᴘʀɪᴄᴇ: $7.00
+            | ꜱᴇʟʟ: $1.75
+slot 27  (r3,c0) x1   minecraft:player_head              "ᴍᴇᴍʙᴇʀ  NarekTM"
+            | Balance: $452,860.80
+slot 31  (r3,c4) x1   minecraft:paper                    "Page: 1/1"
+slot 35  (r3,c8) x1   minecraft:barrier                  "Back"
+=== end ===
+
+=== 05:28:12  TITLE: Buying > ʙᴏɴᴇ ===
+containerSlots: 45  rows: 5  totalWithPlayer: 81
+slot 13  (r1,c4) x1   minecraft:paper                    "Click to purchase"
+            | $6.00
+slot 22  (r2,c4) x1   minecraft:bone                     "ʙᴏɴᴇ"
+            | x 1
+slot 23  (r2,c5) x1   minecraft:light_blue_stained_glass_pane "+1"
+slot 24  (r2,c6) x16  minecraft:light_blue_stained_glass_pane "+16"
+slot 25  (r2,c7) x32  minecraft:light_blue_stained_glass_pane "+32"
+slot 31  (r3,c4) x1   minecraft:chest                    "Click to buy stacks"
+slot 36  (r4,c0) x1   minecraft:player_head              "ᴍᴇᴍʙᴇʀ  NarekTM"
+            | Balance: $452,860.80
+slot 44  (r4,c8) x1   minecraft:barrier                  "Back"
+=== end ===
+
+=== 05:28:15  TITLE: Buying stacks > ʙᴏɴᴇ ===
+containerSlots: 45  rows: 5  totalWithPlayer: 81
+slot 13  (r1,c4) x1   minecraft:paper                    "Click to purchase"
+            | $384.00
+slot 22  (r2,c4) x1   minecraft:bone                     "ʙᴏɴᴇ"
+            | x 64
+slot 23  (r2,c5) x1   minecraft:light_blue_stained_glass "+1"
+slot 24  (r2,c6) x16  minecraft:light_blue_stained_glass "+16"
+slot 25  (r2,c7) x32  minecraft:light_blue_stained_glass "+32"
+slot 36  (r4,c0) x1   minecraft:player_head              "ᴍᴇᴍʙᴇʀ  NarekTM"
+            | Balance: $452,860.80
+slot 44  (r4,c8) x1   minecraft:barrier                  "Back"
+=== end ===

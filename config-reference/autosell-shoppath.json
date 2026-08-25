@@ -1,0 +1,74 @@
+{
+  "steps": [
+    {
+      "kind": "NAVIGATE",
+      "screenTitle": "PLANET SHOP",
+      "slot": 21,
+      "button": 0,
+      "itemId": "minecraft:gunpowder",
+      "itemName": "MOBS",
+      "itemNameRaw": "ᴍᴏʙs",
+      "delta": 0
+    },
+    {
+      "kind": "NAVIGATE",
+      "screenTitle": "MOBS",
+      "slot": 3,
+      "button": 0,
+      "itemId": "minecraft:bone",
+      "itemName": "BONE",
+      "itemNameRaw": "ʙᴏɴᴇ",
+      "delta": 0
+    },
+    {
+      "kind": "NAVIGATE",
+      "screenTitle": "BUYING BONE",
+      "slot": 31,
+      "button": 0,
+      "itemId": "minecraft:chest",
+      "itemName": "CLICK TO BUY STACKS",
+      "itemNameRaw": "Click to buy stacks",
+      "delta": 0
+    },
+    {
+      "kind": "ADJUST",
+      "screenTitle": "BUYING STACKS BONE",
+      "slot": 23,
+      "button": 0,
+      "itemId": "minecraft:light_blue_stained_glass",
+      "itemName": "1",
+      "itemNameRaw": "+1",
+      "delta": 1
+    },
+    {
+      "kind": "ADJUST",
+      "screenTitle": "BUYING STACKS BONE",
+      "slot": 24,
+      "button": 0,
+      "itemId": "minecraft:light_blue_stained_glass",
+      "itemName": "16",
+      "itemNameRaw": "+16",
+      "delta": 16
+    },
+    {
+      "kind": "ADJUST",
+      "screenTitle": "BUYING STACKS BONE",
+      "slot": 25,
+      "button": 0,
+      "itemId": "minecraft:light_blue_stained_glass",
+      "itemName": "32",
+      "itemNameRaw": "+32",
+      "delta": 32
+    },
+    {
+      "kind": "PURCHASE",
+      "screenTitle": "BUYING STACKS BONE",
+      "slot": 13,
+      "button": 0,
+      "itemId": "minecraft:paper",
+      "itemName": "CLICK TO PURCHASE",
+      "itemNameRaw": "Click to purchase",
+      "delta": 0
+    }
+  ]
+}

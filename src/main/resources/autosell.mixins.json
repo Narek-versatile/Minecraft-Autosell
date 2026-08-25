@@ -1,0 +1,13 @@
+{
+	"required": true,
+	"package": "com.narek.autosell.mixin",
+	"compatibilityLevel": "JAVA_25",
+	"client": [
+		"KeyboardHandlerMixin",
+		"KeyboardInputMixin",
+		"ContainerScreenMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}
